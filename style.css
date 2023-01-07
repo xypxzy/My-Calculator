@@ -6,10 +6,7 @@
 }
 
 body {
-    background-image: url(https://4kwallpapers.com/images/wallpapers/ios-16-stock-ipados-16-gradient-background-dark-mode-4480x2520-8134.png);
-    background-repeat: no-repeat;
-    background-position: right;
-;
+    background: radial-gradient(circle, rgba(63,168,251,1) 3%, rgba(70,208,252,1) 32%, rgba(63,168,251,1) 57%);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -41,6 +38,11 @@ body {
     grid-column:1/5;
     grid-row:1/3;
     min-height: 15vh;
+}
+.display {
+    display: flex;
+    justify-content: end;
+    padding-top: 50px;
 }
 
 .plus {
@@ -98,11 +100,11 @@ body {
 .btn:hover {
     transition: 0.2s ease-in;
 
-    background-color: #d7d7d7;
+    background-color: #945151;
 }
 .btn-operation:hover {
-    transition: 0.2s ease-in;
-    background-color: #339ccb;
+    transition: 0.4s ease-in;
+    background-color: #0b2e3d;
 }
 
 /*Switch Button*/

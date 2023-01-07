@@ -2,7 +2,7 @@
 
 /*Selectors*/
 
-const input = document.querySelector('.displayBlock'); //input output button
+const input = document.querySelector('.display'); //input output button
 const numbers = document.querySelectorAll('.number')    //number buttons
 const clear = document.querySelector('.removeNumber')      //Remove
 const restart = document.querySelector('.AC')           //Clear display
@@ -104,11 +104,47 @@ result.addEventListener('click', () => {
 });
 
 clear.addEventListener('click', () => {
-    input.innerHTML = input.innerHTML.slice(0,-1);
+    input.innerHTML = input.innerHTML.slice(0, -1);
 })
 
 restart.addEventListener('click', () => {
     input.innerHTML = '';
 })
+/*Toggle Switch button (day/night)*/
 
+const switchToggle = document.querySelector('.toggle-switch');
+const wrap = document.querySelector('.wrapper');
+const btns = document.querySelectorAll('.btn');
+const btnOperator = document.querySelectorAll('.btn-operation')
+let i = 0, j = 4;
+switchToggle.addEventListener('click', () => {
+    i++;
+    wrap.style.backgroundColor = 'rgba(14,14,31,0.85)';
+    btns.forEach(btn => {
+        btn.style.backgroundColor = 'rgba(45,45,98,0.85)'
+    });
+    input.style.color = '#3ea7da';
+    btnOperator.forEach(btn => {
+        btn.style.backgroundColor = '#116d9b';
+        btn.style.color = '#8ec0d5'
+    })
+    document.querySelector('body').style.background = 'radial-gradient(circle, rgba(70,122,252,1) 16%, rgba(24,66,230,0.7567401960784313) 50%, rgba(24,66,230,0.7567401960784313) 63%, rgba(24,66,230,0.7567401960784313) 76%)';
 
+    if (i == j) {
+        defaultTheme();
+        j+=4;
+    }
+})
+
+function defaultTheme() {
+    wrap.style.backgroundColor = '#efefef';
+    btns.forEach(btn => {
+        btn.style.backgroundColor = '#fff'
+    });
+    input.style.color = '#000';
+    btnOperator.forEach(btn => {
+        btn.style.backgroundColor = '#77c6e3';
+        btn.style.color = '#3c6379'
+    })
+    document.querySelector('body').style.background = 'radial-gradient(circle, rgba(63,168,251,1) 3%, rgba(70,208,252,1) 32%, rgba(63,168,251,1) 57%)';
+}
