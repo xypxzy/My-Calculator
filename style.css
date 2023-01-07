@@ -6,8 +6,10 @@
 }
 
 body {
-
-    background-color: #efefef;
+    background-image: url(https://4kwallpapers.com/images/wallpapers/ios-16-stock-ipados-16-gradient-background-dark-mode-4480x2520-8134.png);
+    background-repeat: no-repeat;
+    background-position: right;
+;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -26,6 +28,7 @@ body {
 }
 
 .wrapper {
+    background-color: #efefef;
     display: grid;
     grid-template-columns: repeat(4,50px);
     gap: 15px 15px;
@@ -114,7 +117,8 @@ body {
 .toggle-switch {
     position: relative;
     width: 40px;
-    left: 100px;
+    left: 130px;
+    top: 20px;
 }
 
 label {
