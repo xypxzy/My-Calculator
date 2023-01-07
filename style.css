@@ -1,0 +1,27 @@
+body {
+
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.wrapper {
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+}
+
+.displayBlock {
+    grid-column-start: 1;
+    grid-column-end: 5;
+    grid-row-start: 1;
+    grid-row-end: 4;
+    height: 15vh;
+}
+
+.biggest {
+    height: 5vh;
+}
